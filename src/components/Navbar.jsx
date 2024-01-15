@@ -19,7 +19,7 @@ const Navbar = () => {
             <IoHomeOutline className='w-7 h-6 text-black-400'/> &nbsp;
                 <span className='text-white'>Real Estate</span>
             </div>
-            {/* Menu icon */}
+           
             <div onClick={()=>setOpen(!open)} className='absolute right-8 top-4 cursor-pointer md:hidden w-7 h-7'>
                 {
                     open ? <XMarkIcon/> : <Bars3BottomRightIcon />
