@@ -16,8 +16,11 @@ export default {
     colors:{
       'neutralSilver': '#F5F7FA',
       'brandPrimary': 'green',
-      'neutralDGrey': 'black'
-    }
+      'neutralDGrey': 'black',
+      'gray': '#A9A9A9',
+      'white': '#FFFFFF'
+    },
+   
   },
   plugins: [require('flowbite/plugin')],
 }
