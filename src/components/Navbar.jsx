@@ -1,50 +1,104 @@
-import React, { useState } from 'react';
-import { BookOpenIcon, Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/solid';
+import React, { useEffect, useState } from "react";
+import { Link } from 'react-scroll';
+import { FaXmark, FaBars } from "react-icons/fa6";
 import { IoHomeOutline } from "react-icons/io5";
 
 const Navbar = () => {
-    let Links =[
-        {name:"Services",link:"/"},
-        {name:"Projects",link:"/"},
-        {name:"About",link:"/"},
-        {name:"Contact",link:"/"},
-      ];
-      let [open, setOpen] =useState(false);
+  const [isMenuOpen, setisMenuOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
 
-    return (
-        <div className='shadow-md w-full fixed top-0 left-0 font-Montserrat bg-gray-500'>
-           <div className='md:flex items-center justify-between bg-lightgray py-4 md:px-7 px-7 '>
-            {/* logo section */}
-            <div className='font-bold text-1.8xl cursor-pointer flex items-center'>
-            <IoHomeOutline className='w-7 h-6 text-black-400'/> &nbsp;
-                <span className='text-white'>Real Estate</span>
-            </div>
-           
-            <div onClick={()=>setOpen(!open)} className='absolute right-8 top-4 cursor-pointer md:hidden w-7 h-7'>
-                {
-                    open ? <XMarkIcon/> : <Bars3BottomRightIcon />
-                }
-            </div>
+  const toggleMenu = () => {
+    setisMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setisMenuOpen(false);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        closeMenu();
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const navItems = [
+    { link: "Home", path: "home" },
+    { link: "Services", path: "services" },
+    { link: "About", path: "about" },
+    { link: "Product", path: "product" },
+    { link: "FAQ", path: "faq" },
+  ];
+
+  return (
+    <header className="shadow-md font-Montserrat bg-gray-300 m-2 rounded-lg fixed top-0 left-0 right-0 ">
+      <nav className={`py-4 px-4 ${isSticky ? "sticky top-0 left-0 right-0 border-b duration-300" : ""}`}>
+        <div className="flex justify-between items-center text-base gap-8 md:gap-6">
+       
+          <a
+            href=""
+            className="text-2xl font-semibold flex items-center space-x-1"
+          >
+            <IoHomeOutline className='w-8 h-6 text-black-500'/>
+            <span className="text-[#263238] sm:text-base ">Real Estate</span>
+          </a>
+        
+          <ul className="md:flex space-x-12 hidden cursor-pointer">
+            {navItems.map(({ link, path }) => 
+              <Link
+                to={path}
+                spy={true}
+                smooth={true}
+                offset={-100}
+                key={path}
+                className="block text-base text-gray900 first:font-medium "
+              >{link}
+              </Link> )}
+          </ul>
          
-           <div className="flex justify-center items-center">
-           <ul className={` md:flex md:items-center md:pb-0 pb-12 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 transition-all duration-500 ease-in ${open ? 'top-12' : 'top-[-490px]'}`}>
-           {
-               Links.map((link) => (
-               <li className='md:ml-8 md:my-0 my-7 font-semibold'>
-                   <a href={link.link} className='text-gray-800 hover:text-white duration-500'>{link.name}</a>
-               </li>))
-           }
-       </ul>
+          <div className="space-x-12 hidden md:flex items-center ">
+            <button className=" bg-white border-2 border-none text-black hover:text-white hover:bg-black h-10 w-full md:px-8 text-2sm rounded-3xl ">Sign up</button>
+          </div>
+
+          <div className="md:hidden">
+            <button onClick={toggleMenu} className="focus:outline-none focus:text-gray-500 pt-2">
+              {isMenuOpen ? (<FaXmark className="h-6 w-6 " />) : (<FaBars className="h-6 w-6 " />)}
+            </button>
+          </div>
         </div>
-        <span className={`md:flex md:items-center md:pb-0 fixed md:static  md:z-auto z-[-1] left-2 w-full md:w-auto transition-all duration-500 ease-in ${open ? 'bottom-80' : 'top-[-490px]'}`}>
-        <button className='btn bg-white border-2 border-gray-200 text-black hover:text-white hover:bg-black duration-500 text-base px-2 py-1 rounded-3xl duration-500 md:static absolute transform -translate-x-1/2 md:translate-x-0'>
-        Get Started
-    </button>
-    </span>
-           
+
+        <div className={`space-y-4 m-2 rounded-lg ab shadow-md px-4 mt-16 py-6 ease-in bg-gray-300 cursor-pointer transition-all duration-300 ${isMenuOpen ? "block fixed bg-gray-200 top-0 right-0 left-0 " : "hidden"}`}>
+          {navItems.map(({ link, path }) => 
+            <Link
+              to={path}
+              spy={true}
+              smooth={true}
+              offset={-100}
+              key={path}
+              className="block text-base text-white hover:text-neutralDGrey first:font-medium text-center "
+            >{link}
+            </Link> )}
         </div>
-        </div>
-    );
+      </nav>
+    </header>
+  );
 };
 
 export default Navbar;

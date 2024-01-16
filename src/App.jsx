@@ -1,11 +1,13 @@
 import React, { Fragment } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
+import Home from "./components/Home";
 
 const App = () => {
   return (
     <div>
-      <Navbar />
+    <Navbar/>
+      <Home/>
     </div>
   );
 };

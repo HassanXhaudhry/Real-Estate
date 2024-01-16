@@ -14,9 +14,9 @@ export default {
       Poppins:['Poppins', 'sans-serif']
     },
     colors:{
-      'neutralSilver': '#F5F7FA',
-      'brandPrimary': 'green',
-      'neutralDGrey': 'black',
+      'silver': '#F5F7FA',
+      'green': 'green',
+      'black': '#000000',
       'gray': '#A9A9A9',
       'white': '#FFFFFF'
     },

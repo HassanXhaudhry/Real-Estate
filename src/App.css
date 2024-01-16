@@ -2,11 +2,5 @@ header{
   z-index: 1001 !important;
 }
 #root {
-  max-width: 1280px;
-  text-align: center;
-}
-
-
-.btn-primary{
-  @apply px-7 py-2 bg-brandPrimary text-white rounded hover:bg-neutralDGrey transition-all duration-300 hover:translate-y-4;
+  max-width: auto;
 }
