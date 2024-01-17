@@ -16,12 +16,12 @@ const Slider = () => {
   return (
     <Fragment>
     <div className='ml-8 my-6'>
-    <h4 className='text-lg'>Our trending blogs</h4>
-    <h1 className='text-5xl '>Read our latest blogs</h1>
+      <h4 className='text-lg'>Our trending blogs</h4>
+      <h1 className='text-5xl '>Read our latest blogs</h1>
     <div className='flex items-center justify-center my-4'>
         <MdChevronLeft className='opacity-50 cursor-pointer hover:opacity-100' onClick={slideLeft} size={40} />
         <MdChevronRight className='opacity-50 cursor-pointer hover:opacity-100' onClick={slideRight} size={40} />
-      </div>
+    </div>
       <div className='relative flex items-center '>
         <div
           id='slider'
