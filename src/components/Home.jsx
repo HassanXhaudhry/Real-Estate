@@ -24,7 +24,7 @@ const Home = () => {
       id: 3,
       title: "Get registered",
       description:
-        "Congratulations! <br/> You completed these steps, and it we feel so good",
+        "Congratulations! <br/> You completed these steps, and we feel it so good",
       image: register,
     },
   ];
