@@ -7,7 +7,12 @@ export default {
     'node_modules/flowbite-react/lib/esm/**/*.js'
   ],
   theme: {
-    extend: {},
+    extend: {
+      blur: {
+        'gradient': '',
+        'blurright':''
+      },
+    },
     fontFamily:{
       Montserrat:['Montserrat', 'sans-serif'],
       Inter:['Inter', 'sans-serif'],
@@ -15,6 +20,7 @@ export default {
     },
     colors:{
       'silver': '#F5F7FA',
+      'darksilver':'#dadada',
       'green': 'green',
       'black': '#000000',
       'gray': '#A9A9A9',
