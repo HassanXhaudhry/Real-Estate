@@ -84,7 +84,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className={`space-y-4 m-2 rounded-lg ab shadow-md px-4 mt-16 py-6 ease-in bg-gray-300 cursor-pointer transition-all duration-300 ${isMenuOpen ? "block fixed bg-gray-200 top-0 right-0 left-0 " : "hidden"}`}>
+        <div className={`space-y-4 m-2 rounded-lg ab shadow-md px-4 mt-16 py-6 ease-in  bg-gray-300 cursor-pointer transition-all duration-300 ${isMenuOpen ? "block bg-gray-200 top-0 right-0 left-0  " : "hidden"}`}>
           {navItems.map(({ link, path }) => 
             <Link
               to={path}
@@ -92,7 +92,7 @@ const Navbar = () => {
               smooth={true}
               offset={-100}
               key={path}
-              className="block text-base text-white hover:text-neutralDGrey first:font-medium text-center "
+              className="block text-base text-white hover:text-neutralDGrey first:font-medium text-center hover:text-black"
             >{link}
             </Link> )}
         </div>

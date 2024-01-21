@@ -44,7 +44,7 @@ const About = () => {
           {services.map((services) => (
             <div
               key={services.id}
-              className="px-4 py-8 text-center md:w-[300px] mx-auto md:h-80 transition-all duration-300 flex items-center justify-center h-full"
+              className="px-4 py-6 text-center md:w-[300px] mx-auto md:h-80 transition-all duration-300 flex items-center justify-center h-full"
             >
               <div>
                 <div className="mb-4 h-14 w-16 mx-auto">
@@ -54,7 +54,7 @@ const About = () => {
                   {services.title}
                 </h4>
                 <p
-                  className="text-sm text-gray"
+                  className="text-sm"
                   dangerouslySetInnerHTML={{ __html: services.description }}
                 ></p>
               </div>

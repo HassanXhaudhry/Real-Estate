@@ -5,12 +5,12 @@ import { FaArrowAltCircleRight,FaArrowAltCircleLeft } from "react-icons/fa";
 const Slider = () => {
   const slideLeft = () => {
     var slider = document.getElementById('slider');
-    slider.scrollLeft = slider.scrollLeft - 220;
+    slider.scrollLeft = slider.scrollLeft - 230;
   };
 
   const slideRight = () => {
     var slider = document.getElementById('slider');
-    slider.scrollLeft = slider.scrollLeft + 220;
+    slider.scrollLeft = slider.scrollLeft + 230;
   };
 
   return (

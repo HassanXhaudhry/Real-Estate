@@ -2,8 +2,6 @@ import React, { Fragment } from 'react'
 import house from '../assets/house.png'
 
 const Home = () => {
- 
-
   return (
     <Fragment>
       <div className="font-Montserrat h-auto pb-12 pr-4 m-2 mt-2 rounded-lg bg-gradient-to-r from-blue-200 to-orange-200 flex flex-col items-center md:flex-row">
@@ -13,7 +11,7 @@ const Home = () => {
             Manage Your <br />
             Property
           </h1>
-          <p className="my-4">
+          <p className="my-4 ">
             You will have everthing nearby supermarket, house, building, etc.
           </p>
 
@@ -41,10 +39,6 @@ const Home = () => {
           />
         </div>
       </div>
-
-   
-
-    
     </Fragment>
   );
 }
