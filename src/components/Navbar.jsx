@@ -41,14 +41,14 @@ const Navbar = () => {
 
   const navItems = [
     { link: "Home", path: "home" },
-    { link: "Services", path: "services" },
+    { link: "Services", path: "slider" },
     { link: "About", path: "about" },
-    { link: "Product", path: "product" },
+    { link: "Pricing", path: "pricing" },
     { link: "FAQ", path: "faq" },
   ];
 
   return (
-    <header className="shadow-md font-Montserrat bg-gray-300 m-2 rounded-lg fixed top-0 left-0 right-0 ">
+    <header className="shadow-md font-Montserrat bg-gray-300 m-2 rounded-lg top-0 left-0 right-0 ">
       <nav className={`py-4 px-4 ${isSticky ? "sticky top-0 left-0 right-0 border-b duration-300" : ""}`}>
         <div className="flex justify-between items-center text-base gap-8 md:gap-6">
        

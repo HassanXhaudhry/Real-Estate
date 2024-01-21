@@ -3,6 +3,7 @@ header{
 }
 #root {
   max-width: auto;
+  font-family: 'Montserrat';
 }
 
 .bg-gradient-to-r {

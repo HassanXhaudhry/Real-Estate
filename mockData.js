@@ -1,5 +1,3 @@
-
-
 export const data = [
     {
       id: 1,
@@ -86,5 +84,30 @@ export const data = [
       description:
         "Choose your qoute  <br/> and apply online. No hustle,  <br/> no paperwork, no application fee",
     },
+  ];
+  
+  export const PRODUCTS = [
+    { iimg: "",
+      pro: "The primary intention of Real Estate can very based on the need or the desire to build something great"},
+  ];
+  export const RESOURCES = [
+    { name: "Industries and tools", link: "#" },
+    { name: "Use cases", link: "#" },
+    { name: "Blog", link: "#" },
+    { name: "Online evenet", link: "#" },
+    { name: "Nostrud exercitation", link: "#" },
+  ];
+  export const COMPANY = [
+    { name: "Diversity & inclusion", link: "#" },
+    { name: "About us", link: "#" },
+    { name: "Press", link: "#" },
+    { name: "Customer Stories", link: "#" },
+    { name: "Online communities", link: "#" },
+  ];
+  export const SUPPORT = [
+    { name: "Documentation", link: "#" },
+    { name: "Tutorials & guides", link: "#" },
+    { name: "Webinars", link: "#" },
+    { name: "Open-source", link: "#" },
   ];
   
