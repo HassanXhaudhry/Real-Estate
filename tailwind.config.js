@@ -21,7 +21,6 @@ export default {
     colors:{
       'silver': '#F5F7FA',
       'darksilver':'#dadada',
-      'green': 'green',
       'black': '#000000',
       'gray': '#A9A9A9',
       'white': '#FFFFFF',

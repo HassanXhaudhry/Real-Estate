@@ -7,9 +7,10 @@ const Footer = () => {
     const Item = ({ Links, title }) => {
         return (
           <ul>
-            <h1 className="mb-1 font-semibold">{title}</h1>
+            <h1 className="mb-1 font-semibold"> {title} </h1>
             {Links.map((link) => (
                 <div key={link.name}>
+                
                 <h2 >{link.pro}</h2>
                 <li >
                 <a

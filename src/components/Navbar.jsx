@@ -74,7 +74,7 @@ const Navbar = () => {
           </ul>
          
           <div className="space-x-12 hidden md:flex items-center ">
-            <button className=" bg-white border-2 border-none text-black hover:text-white hover:bg-black h-10 w-full md:px-8 text-2sm rounded-3xl ">Sign up</button>
+            <button className=" bg-white border-2 border-none text-black hover:text-white hover:bg-black h-10 w-28 text-2sm rounded-3xl ">Sign up</button>
           </div>
 
           <div className="md:hidden">

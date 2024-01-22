@@ -7,6 +7,7 @@ import Slider from "./components/Slider";
 import About from "./components/About";
 import Faq from "./components/Faq";
 import Pricing from "./components/Pricing";
+import ContactUs from "./components/ContactUs";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <About/>
       <Pricing/>
       <Faq/>
+      <ContactUs/>
       <Footer/>
     </div>
   );

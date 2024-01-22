@@ -31,7 +31,7 @@ const About = () => {
   return (
     <Fragment>
       <div
-        className=" font-Montserrat md:px-14 px-4 py-16 max-w-screen-2xl mx-auto bg-silver"
+        className="efont-Montserrat md:px-14 px-4 py-8 max-w-screen-2xl mx-auto bg-silver"
         id="about"
       >
         <div className="mt-16 md:w-1/2 mx-auto text-center">
@@ -61,33 +61,6 @@ const About = () => {
             </div>
           ))}
         </div>
-      </div>
-
-      <div className="bg-silver flex flex-col md:flex-row my-8 py-8 items-center justify-center">
-        <div className="flex-1 text-center justify-center font-Montserrat md:w-1/2 md:mx-4 h-auto w-full">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">
-            Evaluate your property with Real Estate, <br /> Where desire meets
-            passion
-          </h1>
-          <p className="my-4 md:my-6 text-sm md:text-base lg:text-lg">
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout. The point
-            of using Lorem Ipsum is that it has a more-or-less normal
-            distribution of letters, as opposed to using 'Content here, content
-            here', making it look like readable English.
-          </p>
-        </div>
-
-        <div className="md:w-60 sm:mx-4 md:mx-12 mt-4 md:mt-0">
-  <img
-    className="w-full h-[235px] rounded-full"
-    src={home2}
-    alt=""
-  />
-</div>
-
-      
-
       </div>
     </Fragment>
   );
