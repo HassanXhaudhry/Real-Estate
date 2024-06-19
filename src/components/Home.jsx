@@ -4,7 +4,9 @@ import house from '../assets/house.png'
 const Home = () => {
   return (
     <Fragment>
+    
       <div className="font-Montserrat h-auto pb-12 pr-4 m-2 mt-2 rounded-lg bg-gradient-to-r from-blue-200 to-orange-200 flex flex-col items-center md:flex-row">
+     
         <div className="flex-1 pt-20 px-8">
           <p className="text-lg">Welcome to Real Estate</p>
           <h1 className="text-6xl">
